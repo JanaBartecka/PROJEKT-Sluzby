@@ -1,0 +1,293 @@
+html { box-sizing: border-box; }
+*, :after, :before { box-sizing: inherit; }
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    background-color: #FAFAFA;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #8B8B8B;
+    margin: 0;
+}
+
+
+@media screen and (min-width:1100px) {
+    body {
+        max-width: 1040px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.uvodniobrazek img {
+    max-width: 350px;
+    margin: 60px auto 40px auto;
+    vertical-align: bottom;
+}
+
+@media screen and (min-width:640px) {
+    .uvodniobrazek img {
+        max-width: 400px;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (min-width:1100px) {
+    .uvodniobrazek img {
+        max-width: 425px;
+    }
+}
+
+.uvodniobrazek {
+    text-align: center;
+}
+
+h1,
+h2 {
+    text-align: center;
+    font-weight: 500;
+    color: black;
+}
+
+h1 { 
+    font-size: 28px;
+    padding-bottom: 10px;
+    position: relative; 
+    margin-top: 0;
+    margin-bottom: 32px;
+}
+
+h2 {
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+h1::after {
+    background-color:  #407BFF; 
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    /* transform: translate(-50%,0); */
+    width: 50px;
+}
+
+.text {
+    text-align: center;
+    max-width: 460px;
+    margin: 0 auto;
+}
+
+@media screen and (min-width:640px) {
+    .text {
+        max-width: 550px;
+    }
+}
+
+
+/* Tlacitka  */
+
+.tlacitko {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 11px;
+    padding: 11px 30px;
+}
+
+.tlacitko a {
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    padding: 11px 30px;
+}
+
+.tlacitko + .tlacitko {
+    margin-top: 10px;
+}
+
+.chcidobrodruzstvi {
+    margin-top: 30px;
+}
+
+.chcidobrodruzstvi a {
+    background-color: #407BFF;
+    margin: 30px auto 10px auto;
+}
+
+.radejipohodu {
+    margin-bottom: 60px;
+}
+
+.radejipohodu a {
+    background-color: #8B8B8B;
+}
+
+
+@media screen and (min-width:640px) {
+    .tlacitka {
+        display: flex;
+        margin: 30px auto 80px auto;
+        justify-content: center;
+    }
+
+    .chcidobrodruzstvi,
+    .radejipohodu,
+    .chcidobrodruzstvi a
+    .radejipohodu a {
+        margin: 0;
+    }
+
+    .tlacitko + .tlacitko {
+        margin-top: 0;
+    }
+}
+
+
+/* Karticky */
+
+.karticka {
+    display: flex;
+    gap: 30px;
+    max-width: 460px;
+    align-items: center;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    box-shadow: 0 4px 6px #407BFF1F;
+    border-radius: 10px;
+}
+
+.karticka1,
+.karticka4 {
+    margin-top: 28px;
+}
+
+.karticka3,
+.karticka6 {
+    margin-bottom: 60px;
+}
+
+.karticka p {
+    font-size: 13px;
+}
+
+.karticka + .karticka {
+    margin-top: 15px;
+}
+
+@media screen and (min-width:640px) {
+    .skupinakarticek {
+        display: flex;
+        margin-top: 40px;
+        margin-bottom: 80px;
+    }
+
+    .skupinakarticek2 {
+        margin-bottom: 60px;
+    }
+
+    .karticka {
+        flex: 0 0 calc( ( 100% - 80px ) / 3 ) ;
+        display: block;
+        text-align: center;
+        padding: 40px 15px 20px 15px;
+        justify-content: space-around;
+    }
+
+    .karticka1,
+    .karticka4 {
+         margin-top: 0;
+    }
+
+    .karticka3,
+    .karticka6 {
+        margin-bottom: 0;
+    }
+
+    .karticka + .karticka {
+        margin-top: 0;
+    }
+}
+
+@media screen and (min-width:1100px) {
+    .sekce {
+        display: flex;
+        margin-top: 60px;
+        align-items: center;
+        justify-content:flex-start;
+        gap: 60px;
+        max-width: 1040px;
+    }
+
+    /* .uvodniobrazek, */
+    /* .textsekce, */
+    /* .skupinakarticek { */
+        flex:0 0 calc( ( 100% - 2*490px - 60px )/2)
+    /* } */
+/*  */
+    .textsekce1,
+    .uvodniobrazek {
+        max-width:490px;
+    }
+
+    .uvodniobrazek img {
+        padding:auto;
+        margin: auto;
+    }
+
+    .textsekce2,
+    .textsekce3 {
+        max-width:430px;    
+    }
+
+    .skupinakarticek {
+        max-width:550px;
+    }
+
+    .skupinakarticek {
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    .uvodniobrazek,
+    .textsekce2  {
+        order:1;
+    }
+
+    h1,
+    h2 {
+        text-align: left;
+    }
+
+    h1::after {
+        left: 0;
+    }
+
+    .text {
+        text-align: left;
+    }
+
+    .tlacitka {
+        justify-content: flex-start;
+        margin-bottom: 0;
+    }
+
+    .tlacitko + .tlacitko {
+        margin-left: 20px;
+    }
+
+    .chcidobrodruzstvi,
+    .radejipohodu {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .sekce + .sekce {
+        margin-top: 80px;
+    }
+}
